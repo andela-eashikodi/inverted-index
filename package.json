@@ -1,0 +1,27 @@
+{
+  "name": "inverted-index",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jasmine/src/SpecRunner.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andela-ioraelosi/inverted-index.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andela-ioraelosi/inverted-index/issues"
+  },
+  "homepage": "https://github.com/andela-ioraelosi/inverted-index",
+  "dependencies": {
+    "http-server": "^0.8.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.3.2"
+  }
+}
