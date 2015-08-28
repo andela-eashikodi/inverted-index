@@ -44,12 +44,12 @@ describe('Index function', function() {
 
     it('should ensure that the index maps the string keys to the correct objects in the JSON array', function() {
       // The word 'Alice' appeared ONLY in index 0 
-      expect(jsonFileIndex.Alice).toContain(0);
-      expect(jsonFileIndex.Alice).not.toContain(1);
+      expect(jsonFileIndex.Alice).toEqual(jasmine.arrayContaining([0]));
+      expect(jsonFileIndex.Alice).not.toEqual(jasmine.arrayContaining([1]));
 
       // The word 'Lord' appeared ONLY in index 1
-      expect(jsonFileIndex.Lord).toContain(1);
-      expect(jsonFileIndex.Lord).not.toContain(0);
+      expect(jsonFileIndex).toEqual(jasmine.objectContaining({Lord: [1]}));
+      expect(jsonFileIndex.Lord).not.toEqual(jasmine.objectContaining({Lord: [0]}));
 
       // The word 'of' appeared in both index 0 and 1
       expect(jsonFileIndex.of).toContain(0);
